@@ -1,0 +1,17 @@
+@import './../../variables/_colors.css';
+
+.page {
+  --page-background-color: var(--porcelain);
+  --page-main-width: 1280px;
+
+  background-color: var(--page-background-color);
+}
+
+.page__main {
+  margin: 0 auto;
+  max-width: var(--page-main-width);
+}
+
+.page__content {
+  margin: 60px;
+}

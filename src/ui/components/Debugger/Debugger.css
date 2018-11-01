@@ -1,0 +1,87 @@
+.debugger {
+  --air: 8px;
+
+  --debugger-font-family: -apple-system, 'Oxygen', 'Helvetica Neue', sans-serif;
+  --debugger-background-color: #f7f7f7;
+  --debugger-border-color: #e7e7e7;
+  --debugger-color: #333;
+
+  --debugger-button-background-color: #f7f7f7;
+  --debugger-button-border-color: #e7e7e7;
+
+  --debugger-title-font-weight: 700;
+
+  --debugger-request-color: #000;
+  --debugger-request-font-family: monospace;
+  --debugger-request-font-weight: 700;
+
+  --debugger-request-progress-color: #61dafb;
+  --debugger-request-progress-color-finished: lightgreen;
+  --debugger-request-progress-color-paused: #fbfb0e;
+
+  background-color: var(--debugger-background-color);
+  border: 1px solid var(--debugger-border-color);
+  border-radius: var(--air);
+  border-radius: .5rem;
+  bottom: 20px;
+  box-sizing: border-box;
+  color: var(--debugger-color);
+  font-family: var(--debugger-font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: calc(var(--air) * 31);
+  padding: calc(var(--air) * 2);
+  pointer-events: all;
+  position: fixed;
+  right: 20px;
+  z-index: 99999;
+}
+
+.debugger__latency-bar {
+  width: 100%;
+}
+
+.debugger__title {
+  font-weight: var(--debugger-title-font-weight);
+  margin-bottom: 10px;
+}
+
+.debugger__title-detail {
+  display: block;
+  margin-bottom: var(--air);
+}
+
+.debugger__bin {
+  background: none;
+  border: none;
+  cursor: pointer;
+  height: calc(var(--air) * 2);
+  outline: none;
+}
+
+.debugger__request {
+  color: var(--debugger-request-color);
+  font-family: var(--debugger-request-font-family);
+  font-weight: var(--debugger-request-font-weight);
+  height: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.debugger__request-progress {
+  background-color: var(--debugger-request-progress-color);
+  height: 100%;
+  left: 0;
+  opacity: .8;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.debugger__request-progress--finished {
+  background-color: var(--debugger-request-progress-color-finished);
+}
+
+.debugger__request-progress--paused {
+  background-color: var(--debugger-request-progress-color-paused);
+}

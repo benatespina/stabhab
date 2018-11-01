@@ -1,0 +1,48 @@
+{
+  "name": "stabhab",
+  "description": "Dummy app based on React to make PoC easily",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": {
+    "name": "Beñat Espiña",
+    "email": "benatespina@gmail.com",
+    "url": "https://benatespina.com"
+  },
+  "dependencies": {
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-draggable": "^3.0.5",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.1"
+  },
+  "devDependencies": {
+    "prettier": "^1.14.2",
+    "prettier-eslint": "^8.8.2",
+    "prettier-stylelint": "^0.4.2",
+    "react-app-rewire-eslint": "^0.2.3",
+    "react-app-rewired": "^1.4.1",
+    "stylelint": "^9.5.0",
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-order": "^0.8.1",
+    "stylelint-prettier": "^1.0.1",
+    "stylelint-selector-bem-pattern": "^2.0.0",
+    "stylelint-webpack-plugin": "^0.10.5"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "fixer": "npm run fixer:js && npm run fixer:css",
+    "fixer:js": "node_modules/.bin/prettier 'src/**/*.js' --write",
+    "fixer:css": "node_modules/.bin/prettier 'src/**/*.css' --write"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

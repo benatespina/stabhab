@@ -1,0 +1,31 @@
+/**
+ * The following code is copied from:
+ * https://codepen.io/shengslogar/pen/MPwNZm
+ */
+
+@import './../../variables/_colors.css';
+
+.spinner {
+  --spinner-color: var(--valhalla);
+  --spinner-rotation-velocity: .8s;
+  --spinner-size: 40px;
+  --spinner-weight: 6px;
+
+  animation: spinner-infinite-rotation var(--spinner-rotation-velocity) linear infinite;
+  border: var(--spinner-weight) solid var(--spinner-color);
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-radius: 50%;
+  display: block;
+  height: var(--spinner-size);
+  left: calc(50% - (var(--spinner-size) / 2));
+  position: fixed;
+  top: calc(50% - (var(--spinner-size) / 2));
+  width: var(--spinner-size);
+}
+
+@keyframes spinner-infinite-rotation {
+  to {
+    transform: rotateZ(360deg);
+  }
+}

@@ -1,0 +1,36 @@
+@import './../../variables/_colors.css';
+@import './../../variables/_typography.css';
+
+.header {
+  --header-content-air: 60px;
+  --header-title-color: var(--valhalla);
+  --header-title-font-family: var(--font-family-roboto);
+  --header-title-font-size: var(--font-size-40);
+  --header-title-line-height: var(--font-size-40-line-height);
+  --header-logo-height: 75px;
+  --header-separator-width: 500px;
+}
+
+.header__content {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-top: var(--header-content-air);
+}
+
+.header__title {
+  color: var(--header-title-color);
+  font-family: var(--header-title-font-family);
+  font-size: var(--header-title-font-size);
+  line-height: var(--header-title-line-height);
+  margin: 0;
+}
+
+.header__logo {
+  height: var(--header-logo-height);
+}
+
+.header__separator {
+  border: 2px solid var(--header-title-color);
+  width: var(--header-separator-width);
+}

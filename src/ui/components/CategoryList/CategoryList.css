@@ -1,0 +1,12 @@
+@import './../../variables/_colors.css';
+@import './../../variables/_typography.css';
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.category-list__element {
+  margin: 15px;
+}
