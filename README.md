@@ -33,7 +33,7 @@ $ npm install
 $ npm start
 ```
 
-> \* Please, pick a branch that you are more interested in from [here](#list-of-branches)
+> \* Please, choose the branch that most interests you, from [here](#proofs-of-concept)
 
 ## 👪 Credits
 
