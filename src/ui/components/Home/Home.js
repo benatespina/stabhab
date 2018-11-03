@@ -6,7 +6,7 @@ import Page from './../Page/Page';
 
 class Home extends Component {
   state = {
-    categories: null,
+    categories: [],
     isLoading: true,
   };
 

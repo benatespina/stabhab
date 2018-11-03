@@ -10,6 +10,7 @@ class App extends Component {
       <Router>
         <>
           <Route path="/" exact component={Home} />
+          <Route path="/categories/:categorySlug/events" exact component={Home} />
           <Route path="/event/:eventSlug" component={Event} />
         </>
       </Router>

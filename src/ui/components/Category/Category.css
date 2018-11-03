@@ -1,94 +1,30 @@
 @import './../../variables/_colors.css';
-@import './../../variables/_typography.css';
 
 .category {
-  --category-background-color: var(--white);
+  --category-air: 30px;
   --category-height: 300px;
-  --category-min-width: 350px;
-  --category-max-width: 470px;
-  --category-animation: translateY(-10px);
-  --category-animation-duration: .3s;
-  --category-font-family: var(--font-family-roboto);
-  --category-image-size: 200px;
-  --category-name-font-size: var(--font-size-20);
-  --category-name-line-height: var(--font-size-20-line-height);
-  --category-name-font-weight: var(--font-family-roboto-medium);
-  --category-separator-color: var(--fountain-blue);
-  --category-date-font-size: var(--font-size-14);
-  --category-date-line-height: var(--font-size-14-line-height);
-  --category-date-font-weight: var(--font-family-roboto-medium);
-  --category-location-font-size: var(--font-size-14);
-  --category-location-line-height: var(--font-size-14-line-height);
+  --category-triangle-background-color: var(--woodsmoke);
 
-  background-color: var(--category-background-color);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2);
-  cursor: pointer;
-  font-family: var(--category-font-family);
   height: var(--category-height);
-  position: relative;
-  transition: transform var(--category-animation-duration);
-  width: var(--category-min-width);
 }
 
-.category:hover {
-  transform: var(--category-animation);
-  transition: transform var(--category-animation-duration);
+.category--open {
+  margin-bottom: calc(var(--category-height) + var(--category-air));
 }
 
-.category__image {
-  height: var(--category-image-size);
-  object-fit: cover;
-  width: 100%;
-}
-
-.category__plane {
-  background-color: var(--white);
-  height: 40px;
-  left: -1px;
+.category__triangle {
+  border-color: transparent transparent var(--category-triangle-background-color);
+  border-style: solid;
+  border-width: 0 20px 20px;
+  bottom: -30px;
+  height: 0;
+  left: 50%;
   position: absolute;
-  top: 180px;
-  transform: rotate(5deg) skew(5deg);
-  width: calc(var(--category-min-width) + 2px);
+  transform: translateX(-50%);
+  transition: all .1s ease-in-out;
+  width: 0;
 }
 
-.category__content {
-  background-color: var(--category-background-color);
-  bottom: 0;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  position: absolute;
-}
-
-.category__separator {
-  border: 2px solid var(--category-separator-color);
-  margin-left: 0;
-  width: 30px;
-}
-
-.category__name {
-  font-size: var(--category-name-font-size);
-  font-weight: var(--category-name-font-weight);
-  line-height: var(--category-name-line-height);
-}
-
-.category__date {
-  font-size: var(--category-date-font-size);
-  font-weight: var(--category-date-font-weight);
-  line-height: var(--category-date-line-height);
-}
-
-.category__location {
-  font-size: var(--category-location-font-size);
-  line-height: var(--category-location-line-height);
-}
-
-@media screen and (min-width: 485px) {
-  .category--big {
-    width: var(--category-max-width);
-  }
-
-  .category--big .category__plane {
-    width: calc(var(--category-max-width) + 2px);
-  }
+.category__events {
+  margin-top: var(--category-air);
 }

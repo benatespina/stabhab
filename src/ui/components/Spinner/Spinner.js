@@ -1,4 +1,4 @@
 import React from 'react';
 import './Spinner.css';
 
-export default () => <div className="spinner" />;
+export default ({small = false}) => <div className={`spinner${small ? ' spinner--small' : ''}`} />;

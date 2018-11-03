@@ -7,8 +7,10 @@
 
 .spinner {
   --spinner-color: var(--valhalla);
+  --spinner-small-color: var(--fountain-blue);
   --spinner-rotation-velocity: .8s;
   --spinner-size: 40px;
+  --spinner-small-size: 15px;
   --spinner-weight: 6px;
 
   animation: spinner-infinite-rotation var(--spinner-rotation-velocity) linear infinite;
@@ -19,9 +21,16 @@
   display: block;
   height: var(--spinner-size);
   left: calc(50% - (var(--spinner-size) / 2));
-  position: fixed;
+  position: absolute;
   top: calc(50% - (var(--spinner-size) / 2));
   width: var(--spinner-size);
+}
+
+.spinner--small {
+  border-right-color: var(--spinner-small-color);
+  border-top-color: var(--spinner-small-color);
+  height: var(--spinner-small-size);
+  width: var(--spinner-small-size);
 }
 
 @keyframes spinner-infinite-rotation {
