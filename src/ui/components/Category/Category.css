@@ -6,10 +6,16 @@
   --category-triangle-background-color: var(--woodsmoke);
 
   height: var(--category-height);
+  transition: margin-bottom .4s ease-in-out .4s;
 }
 
 .category--open {
   margin-bottom: calc(var(--category-height) + var(--category-air));
+  transition: margin-bottom .4s ease-in-out;
+}
+
+.category__triangle-area {
+  position: relative;
 }
 
 .category__triangle {
@@ -21,10 +27,49 @@
   left: 50%;
   position: absolute;
   transform: translateX(-50%);
-  transition: all .1s ease-in-out;
   width: 0;
 }
 
 .category__events {
   margin-top: var(--category-air);
+}
+
+.category__events-transition-enter {
+  opacity: 0;
+}
+
+.category__events-transition-enter-active {
+  opacity: 1;
+  transition: opacity .4s ease-in-out;
+}
+
+.category__events-transition-exit {
+  opacity: 1;
+}
+
+.category__events-transition-exit-active {
+  opacity: 0;
+  transition: opacity .4s ease-in-out;
+}
+
+.category__triangle-transition-enter {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.category__triangle-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform .4s ease-in-out, opacity .4s ease-in-out .1s;
+}
+
+.category__triangle-transition-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.category__triangle-transition-exit-active {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: transform .4s ease-in-out, opacity .4s ease-in-out;
 }

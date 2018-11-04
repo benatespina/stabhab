@@ -22,7 +22,7 @@ class CategoryEvents extends Component {
     return (
       <div className="category-events__events">
         {events.slice(0, 3).map(event => (
-          <div className="category-events__event">
+          <div className="category-events__event" key={event.id}>
             <div className="category-events__date">{event.date}</div>
             <Underline />
             <div className="category-events__name">{event.name}</div>
