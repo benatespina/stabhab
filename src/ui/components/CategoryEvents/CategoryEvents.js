@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {animateScroll as scroll} from 'react-scroll';
 import {Link} from 'react-router-dom';
 import {getEvents} from './../../../api/requests';
 import Spinner from './../Spinner/Spinner';
@@ -6,12 +7,18 @@ import Underline from './../Underline/Underline';
 import './CategoryEvents.css';
 
 class CategoryEvents extends Component {
+  constructor(props) {
+    super(props);
+    this.ref = React.createRef();
+  }
+
   state = {
     events: [],
     isLoading: true,
   };
 
   componentDidMount() {
+    scroll.scrollTo(this.ref.current.offsetTop);
     getEvents(this.props.category.slug).then(events => this.setState({events, isLoading: false}));
   }
 
@@ -50,7 +57,7 @@ class CategoryEvents extends Component {
 
   render() {
     return (
-      <div className="category-events">
+      <div className="category-events" ref={this.ref}>
         <div className="category-events__close" onClick={this.props.onClick} />
         <div className="category-events__content">{this.renderContent()}</div>
       </div>
